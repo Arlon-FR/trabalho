@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio - Arlon</title>
+</head>
+<body>
+
+    <nav>
+        <button id="btn-menu" aria-label="Abrir menu">☰</button>
+
+        <div id="nav-links">
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#portifolio">Portifólio</a>
+            <a href="#contato">Contato</a>
+        </div>
+
+        <button id="btn-tema">☀️ Tema claro</button>
+    </nav>
+
+    <section id="sobre">
+        <h1>Sobre mim</h1>
+        <p>Sou profissional de TI com foco em infraestrutura, redes, segurança da informação e desenvolvimento,
+        atuando como Analista de Suporte na Justiça Federal. Tenho experiência em configuração e suporte a ambientes
+        Windows e Linux, administração de rede, VPN, acesso remoto, troubleshooting de hardware e software e atendimento
+        a usuários em ambiente corporativo.<br><br>
+        Atualmente curso Engenharia de Software (UNINTER) e estou me aprofundando em Linux, cloud computing, DevSecOps e
+        boas práticas de desenvolvimento. Estou em preparação para certificações como CompTIA Security+.<br><br>
+        Gosto de aprender continuamente, testar novas ferramentas e automatizar tarefas com Python, Shell Script e
+        PowerShell, além de estudar Java e outras linguagens de programação para evoluir no desenvolvimento de software.
+        Tenho interesse especial em segurança de infraestrutura, padrões de código e na construção de soluções estáveis,
+        seguras e bem estruturadas que facilitem o dia a dia dos usuários e das equipes de TI.</p>
+    </section>
+
+    <section id="formacao">
+        <h1>Formação</h1>
+        <ul>
+            <li>Tecnólogo em Análise e Desenvolvimento de Sistemas</li>
+            <li>Pós Graduação em Inteligência Artificial</li>
+            <li>Bacharelado em Engenharia de Software (em andamento)</li>
+        </ul>
+    </section>
+
+    <section id="portifolio">
+        <h1>Portifólio</h1>
+
+        <h2>Automação</h2>
+        <p>Notando um problema crítico no meu trabalho, criei um sistema que automatiza a triagem de tickets
+            que chegavam no sistema de gerenciamento, deixando o SLA sempre positivo e facilitando o trabalho
+            dos técnicos.
+            <a href="https://github.com/Arlon-FR/PuxaChamados"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver projeto no GitHub
+            </a>
+        </p>
+
+        <h2>Gerador de senhas em Python</h2>
+        <p>Desenvolvi um gerador de senhas em Python para criar senhas fortes e aleatórias
+            de forma simples pela linha de comando, auxiliando na criação de credenciais
+            mais seguras para uso pessoal e em testes de laboratório.
+            <a href="https://github.com/Arlon-FR/Gerador_de_senha"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver projeto no GitHub
+            </a>
+        </p>
+
+        <h2>Scripts Java</h2>
+        <p>Pequenos scripts feitos em Java no Beecrowd.
+            <a href="https://github.com/Arlon-FR/Java"
+               target="_blank"
+               rel="noopener noreferrer">
+               Ver projeto no GitHub
+            </a>
+        </p>
+    </section>
+
+    <section id="contato">
+        <h1>Contato</h1>
+
+        <div class="container-images">
+            <div class="images">
+                <a href="https://www.linkedin.com/in/arlon-rocha-0016a2212/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="images/Linkedin.png" alt="logo-linkedin">
+                </a>
+
+                <a href="https://github.com/Arlon-FR"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <img src="images/Github.png" alt="logo-github">
+                </a>
+            </div>
+        </div>
+
+        <form id="contact-form" onsubmit="validarFormulario(event)">
+            <div class="form-group">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                <span class="erro" id="erro-nome"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com">
+                <span class="erro" id="erro-email"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+                <span class="erro" id="erro-mensagem"></span>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar mensagem</button>
+
+            <div id="msg-sucesso" style="display:none;">
+                ✅ Mensagem enviada com sucesso! Responderei em breve.
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // 1. Validação do formulário
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            var nome     = document.getElementById('nome').value.trim();
+            var email    = document.getElementById('email').value.trim();
+            var mensagem = document.getElementById('mensagem').value.trim();
+
+            document.getElementById('erro-nome').textContent     = '';
+            document.getElementById('erro-email').textContent    = '';
+            document.getElementById('erro-mensagem').textContent = '';
+
+            var valido = true;
+
+            if (nome === '') {
+                document.getElementById('erro-nome').textContent =
+                    'Por favor, informe seu nome.';
+                valido = false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email === '') {
+                document.getElementById('erro-email').textContent =
+                    'Por favor, informe seu e-mail.';
+                valido = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('erro-email').textContent =
+                    'E-mail inválido. Ex: usuario@dominio.com';
+                valido = false;
+            }
+
+            if (mensagem === '') {
+                document.getElementById('erro-mensagem').textContent =
+                    'Por favor, escreva uma mensagem.';
+                valido = false;
+            }
+
+            if (valido) {
+                document.getElementById('contact-form').reset();
+
+                var msgSucesso = document.getElementById('msg-sucesso');
+                msgSucesso.style.display = 'block';
+
+                setTimeout(function () {
+                    msgSucesso.style.display = 'none';
+                }, 5000);
+            }
+        }
+
+        // 2. Tema claro/escuro
+        var btnTema = document.getElementById('btn-tema');
+
+        btnTema.addEventListener('click', function () {
+            document.body.classList.toggle('tema-claro');
+
+            if (document.body.classList.contains('tema-claro')) {
+                btnTema.textContent = '🌙 Tema escuro';
+            } else {
+                btnTema.textContent = '☀️ Tema claro';
+            }
+        });
+
+        // 3. Menu responsivo (hamburguer)
+        var btnMenu  = document.getElementById('btn-menu');
+        var navLinks = document.getElementById('nav-links');
+
+        btnMenu.addEventListener('click', function () {
+            navLinks.classList.toggle('menu-aberto');
+
+            if (navLinks.classList.contains('menu-aberto')) {
+                btnMenu.textContent = '✕';
+            } else {
+                btnMenu.textContent = '☰';
+            }
+        });
+
+        document.querySelectorAll('#nav-links a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                navLinks.classList.remove('menu-aberto');
+                btnMenu.textContent = '☰';
+            });
+        });
+    </script>
+
+</body>
+</html>
