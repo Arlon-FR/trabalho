@@ -13,29 +13,53 @@
 
         <div id="nav-links">
             <a href="#sobre">Sobre</a>
+            <a href="#habilidades">Habilidades</a>
             <a href="#formacao">Formação</a>
-            <a href="#portifolio">Portifólio</a>
+            <a href="#portifolio">Portfólio</a>
             <a href="#contato">Contato</a>
         </div>
 
         <button id="btn-tema">☀️ Tema claro</button>
     </nav>
 
-    <section id="sobre">
+    <section id="sobre" class="fade-in">
         <h1>Sobre mim</h1>
-        <p>Sou profissional de TI com foco em infraestrutura, redes, segurança da informação e desenvolvimento,
-        atuando como Analista de Suporte na Justiça Federal. Tenho experiência em configuração e suporte a ambientes
-        Windows e Linux, administração de rede, VPN, acesso remoto, troubleshooting de hardware e software e atendimento
-        a usuários em ambiente corporativo.<br><br>
-        Atualmente curso Engenharia de Software (UNINTER) e estou me aprofundando em Linux, cloud computing, DevSecOps e
-        boas práticas de desenvolvimento. Estou em preparação para certificações como CompTIA Security+.<br><br>
-        Gosto de aprender continuamente, testar novas ferramentas e automatizar tarefas com Python, Shell Script e
-        PowerShell, além de estudar Java e outras linguagens de programação para evoluir no desenvolvimento de software.
-        Tenho interesse especial em segurança de infraestrutura, padrões de código e na construção de soluções estáveis,
-        seguras e bem estruturadas que facilitem o dia a dia dos usuários e das equipes de TI.</p>
+        <p>Sou profissional de TI com foco em infraestrutura, redes, segurança da informação e desenvolvimento, atuando como Analista de Suporte na Justiça Federal. Tenho experiência em configuração e suporte a ambientes Windows e Linux, administração de rede, VPN, acesso remoto, troubleshooting de hardware e software e atendimento a usuários em ambiente corporativo.<br><br>
+        Atualmente curso Engenharia de Software (UNINTER) e estou me aprofundando em Linux, cloud computing, DevSecOps e boas práticas de desenvolvimento. Estou em preparação para certificações como CompTIA Security+.<br><br>
+        Gosto de aprender continuamente, testar novas ferramentas e automatizar tarefas com Python, Shell Script e PowerShell, além de estudar Java e outras linguagens de programação para evoluir no desenvolvimento de software. Tenho interesse especial em segurança de infraestrutura, padrões de código e na construção de soluções estáveis, seguras e bem estruturadas que facilitem o dia a dia dos usuários e das equipes de TI.</p>
     </section>
 
-    <section id="formacao">
+    <section id="habilidades" class="fade-in">
+        <h1>Habilidades</h1>
+        <h2>Linguagens &amp; Scripts</h2>
+        <div class="badges">
+            <span class="badge">Python</span>
+            <span class="badge">Shell Script / Bash</span>
+            <span class="badge">PowerShell</span>
+            <span class="badge">Java</span>
+            <span class="badge">HTML &amp; CSS</span>
+            <span class="badge">JavaScript</span>
+        </div>
+        <h2>Infraestrutura &amp; Redes</h2>
+        <div class="badges">
+            <span class="badge">Windows Server</span>
+            <span class="badge">Linux (Ubuntu / Rocky)</span>
+            <span class="badge">VPN</span>
+            <span class="badge">WinRM / SSH</span>
+            <span class="badge">TCP/IP</span>
+            <span class="badge">Active Directory</span>
+        </div>
+        <h2>Ferramentas &amp; Plataformas</h2>
+        <div class="badges">
+            <span class="badge">Git &amp; GitHub</span>
+            <span class="badge">Docker (básico)</span>
+            <span class="badge">VirtualBox</span>
+            <span class="badge">VS Code</span>
+            <span class="badge">CompTIA Security+ (em prep.)</span>
+        </div>
+    </section>
+
+    <section id="formacao" class="fade-in">
         <h1>Formação</h1>
         <ul>
             <li>Tecnólogo em Análise e Desenvolvimento de Sistemas</li>
@@ -44,132 +68,103 @@
         </ul>
     </section>
 
-    <section id="portifolio">
-        <h1>Portifólio</h1>
-
-        <h2>Automação</h2>
-        <p>Notando um problema crítico no meu trabalho, criei um sistema que automatiza a triagem de tickets
-            que chegavam no sistema de gerenciamento, deixando o SLA sempre positivo e facilitando o trabalho
-            dos técnicos.
-            <a href="https://github.com/Arlon-FR/PuxaChamados"
-               target="_blank"
-               rel="noopener noreferrer">
-               Ver projeto no GitHub
-            </a>
-        </p>
-
-        <h2>Gerador de senhas em Python</h2>
-        <p>Desenvolvi um gerador de senhas em Python para criar senhas fortes e aleatórias
-            de forma simples pela linha de comando, auxiliando na criação de credenciais
-            mais seguras para uso pessoal e em testes de laboratório.
-            <a href="https://github.com/Arlon-FR/Gerador_de_senha"
-               target="_blank"
-               rel="noopener noreferrer">
-               Ver projeto no GitHub
-            </a>
-        </p>
-
-        <h2>Scripts Java</h2>
-        <p>Pequenos scripts feitos em Java no Beecrowd.
-            <a href="https://github.com/Arlon-FR/Java"
-               target="_blank"
-               rel="noopener noreferrer">
-               Ver projeto no GitHub
-            </a>
-        </p>
-    </section>
-
-    <section id="contato">
-        <h1>Contato</h1>
-
-        <div class="container-images">
-            <div class="images">
-                <a href="https://www.linkedin.com/in/arlon-rocha-0016a2212/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <img src="images/linkedin.jpg" alt="logo-linkedin">
-                </a>
-
-                <a href="https://github.com/Arlon-FR"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    <img src="images/github.webp" alt="logo-github">
-                </a>
+    <section id="portifolio" class="fade-in">
+        <h1>Portfólio</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>🤖 Automação de Tickets</h2>
+                <p>Notando um problema crítico no trabalho, criei um sistema que automatiza a triagem de tickets no sistema de gerenciamento, mantendo o SLA positivo e facilitando o trabalho dos técnicos.</p>
+                <div class="card-tags">
+                    <span class="badge">Python</span>
+                    <span class="badge">Automação</span>
+                </div>
+                <a href="https://github.com/Arlon-FR/PuxaChamados" target="_blank" class="card-link">Ver no GitHub →</a>
+            </div>
+            <div class="card">
+                <h2>🔐 Gerador de Senhas</h2>
+                <p>Desenvolvido em Python para criar senhas fortes e aleatórias pela linha de comando, auxiliando na criação de credenciais seguras para uso pessoal e em testes de laboratório.</p>
+                <div class="card-tags">
+                    <span class="badge">Python</span>
+                    <span class="badge">Segurança</span>
+                    <span class="badge">CLI</span>
+                </div>
+                <a href="https://github.com/Arlon-FR/Gerador_de_senha" target="_blank" class="card-link">Ver no GitHub →</a>
+            </div>
+            <div class="card">
+                <h2>☕ Scripts Java</h2>
+                <p>Pequenos scripts feitos em Java como parte da prática de algoritmos e resolução de problemas na plataforma Beecrowd.</p>
+                <div class="card-tags">
+                    <span class="badge">Java</span>
+                    <span class="badge">Algoritmos</span>
+                </div>
+                <a href="https://github.com/Arlon-FR/Java" target="_blank" class="card-link">Ver no GitHub →</a>
             </div>
         </div>
+    </section>
 
-        <form id="contact-form" onsubmit="validarFormulario(event)">
+    <section id="contato" class="fade-in">
+        <h1>Contato</h1>
+        <div class="images">
+            <a href="https://www.linkedin.com/in/arlon-rocha-0016a2212/" target="_blank"><img src="logo-linkedin.png" alt="logo-linkedin"></a>
+            <a href="https://github.com/Arlon-FR" target="_blank"><img src="logo-github.png" alt="logo-github"></a>
+        </div>
+
+        <form id="contact-form" novalidate onsubmit="validarFormulario(event)">
             <div class="form-group">
                 <label for="nome">Nome *</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
                 <span class="erro" id="erro-nome"></span>
             </div>
-
             <div class="form-group">
                 <label for="email">E-mail *</label>
                 <input type="email" id="email" name="email" placeholder="seu@email.com">
                 <span class="erro" id="erro-email"></span>
             </div>
-
             <div class="form-group">
                 <label for="mensagem">Mensagem *</label>
                 <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
                 <span class="erro" id="erro-mensagem"></span>
             </div>
-
             <button type="submit" class="btn-enviar">Enviar mensagem</button>
-
-            <div id="msg-sucesso" style="display:none;">
-                ✅ Mensagem enviada com sucesso! Responderei em breve.
-            </div>
         </form>
+        <p id="msg-sucesso" style="display:none;">✅ Mensagem enviada com sucesso! Responderei em breve.</p>
     </section>
+
+    <footer>
+        <p>© 2026 Arlon Rocha · Desenvolvido com HTML, CSS e JavaScript</p>
+    </footer>
 
     <script>
         // 1. Validação do formulário
         function validarFormulario(event) {
             event.preventDefault();
-
-            var nome     = document.getElementById('nome').value.trim();
-            var email    = document.getElementById('email').value.trim();
+            var nome = document.getElementById('nome').value.trim();
+            var email = document.getElementById('email').value.trim();
             var mensagem = document.getElementById('mensagem').value.trim();
-
-            document.getElementById('erro-nome').textContent     = '';
-            document.getElementById('erro-email').textContent    = '';
+            document.getElementById('erro-nome').textContent = '';
+            document.getElementById('erro-email').textContent = '';
             document.getElementById('erro-mensagem').textContent = '';
-
             var valido = true;
-
             if (nome === '') {
-                document.getElementById('erro-nome').textContent =
-                    'Por favor, informe seu nome.';
+                document.getElementById('erro-nome').textContent = 'Por favor, informe seu nome.';
                 valido = false;
             }
-
             var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
             if (email === '') {
-                document.getElementById('erro-email').textContent =
-                    'Por favor, informe seu e-mail.';
+                document.getElementById('erro-email').textContent = 'Por favor, informe seu e-mail.';
                 valido = false;
             } else if (!emailRegex.test(email)) {
-                document.getElementById('erro-email').textContent =
-                    'E-mail inválido. Ex: usuario@dominio.com';
+                document.getElementById('erro-email').textContent = 'E-mail inválido. Ex: usuario@dominio.com';
                 valido = false;
             }
-
             if (mensagem === '') {
-                document.getElementById('erro-mensagem').textContent =
-                    'Por favor, escreva uma mensagem.';
+                document.getElementById('erro-mensagem').textContent = 'Por favor, escreva uma mensagem.';
                 valido = false;
             }
-
             if (valido) {
                 document.getElementById('contact-form').reset();
-
                 var msgSucesso = document.getElementById('msg-sucesso');
                 msgSucesso.style.display = 'block';
-
                 setTimeout(function () {
                     msgSucesso.style.display = 'none';
                 }, 5000);
@@ -178,10 +173,8 @@
 
         // 2. Tema claro/escuro
         var btnTema = document.getElementById('btn-tema');
-
         btnTema.addEventListener('click', function () {
             document.body.classList.toggle('tema-claro');
-
             if (document.body.classList.contains('tema-claro')) {
                 btnTema.textContent = '🌙 Tema escuro';
             } else {
@@ -190,24 +183,33 @@
         });
 
         // 3. Menu responsivo (hamburguer)
-        var btnMenu  = document.getElementById('btn-menu');
+        var btnMenu = document.getElementById('btn-menu');
         var navLinks = document.getElementById('nav-links');
-
         btnMenu.addEventListener('click', function () {
             navLinks.classList.toggle('menu-aberto');
-
             if (navLinks.classList.contains('menu-aberto')) {
                 btnMenu.textContent = '✕';
             } else {
                 btnMenu.textContent = '☰';
             }
         });
-
         document.querySelectorAll('#nav-links a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('menu-aberto');
                 btnMenu.textContent = '☰';
             });
+        });
+
+        // 4. Animação fade-in ao rolar
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visivel');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+            observer.observe(el);
         });
     </script>
 
