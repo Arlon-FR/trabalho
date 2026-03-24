@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1b09b8, #552586, #b589d6);
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+nav a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: bisque;
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+p,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#contato .images {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#contato img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* =============================================
+   TEMA CLARO
+   ============================================= */
+body.tema-claro {
+    background: linear-gradient(135deg, #dde8ff, #e8d5f5, #f5eaff);
+    color: #1a1a2e;
+}
+
+body.tema-claro section {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+body.tema-claro nav {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+body.tema-claro nav a {
+    color: #2a1a5e;
+}
+
+body.tema-claro a {
+    color: #5a2dab;
+}
+
+/* =============================================
+   BOTÕES DA NAV (tema e hamburguer)
+   ============================================= */
+#btn-tema,
+#btn-menu {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: antiquewhite;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#btn-tema:hover,
+#btn-menu:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Hamburguer só aparece em telas pequenas */
+#btn-menu {
+    display: none;
+    font-size: 1.2rem;
+    padding: 4px 10px;
+}
+
+/* =============================================
+   FORMULÁRIO DE CONTATO
+   ============================================= */
+#contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+}
+
+/* Grupo de campo: label + input + mensagem de erro */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #c8b8e8;
+}
+
+body.tema-claro .form-group label {
+    color: #3a1a7e;
+}
+
+/* Campos input e textarea do formulário */
+.form-group input,
+.form-group textarea {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+body.tema-claro .form-group input,
+body.tema-claro .form-group textarea {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(0, 0, 0, 0.2);
+    color: #1a1a2e;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b589d6;
+}
+
+/* Mensagem de erro de validação (exibida via JavaScript) */
+.erro {
+    font-size: 0.8rem;
+    color: #ff8099;
+    min-height: 14px;
+}
+
+/* Botão de envio do formulário */
+.btn-enviar {
+    align-self: flex-start;
+    padding: 10px 24px;
+    background: #552586;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-enviar:hover {
+    background: #7a38b8;
+    transform: translateY(-2px);
+}
+
+/* Mensagem de confirmação exibida após envio (via JavaScript) */
+#msg-sucesso {
+    padding: 12px 16px;
+    background: rgba(50, 200, 130, 0.15);
+    border: 1px solid rgba(50, 200, 130, 0.4);
+    border-radius: 6px;
+    color: #5dd39e;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+/* =============================================
+   RESPONSIVIDADE — MENU MOBILE
+   ============================================= */
+@media (max-width: 600px) {
+
+    /* Exibe o botão hamburguer em telas pequenas */
+    #btn-menu {
+        display: block;
+    }
+
+    /* Esconde os links por padrão no mobile */
+    #nav-links {
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.85);
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0;
+        z-index: 99;
+    }
+
+    /* Classe adicionada via JavaScript para mostrar o menu */
+    #nav-links.menu-aberto {
+        display: flex;
+    }
+
+    #nav-links a {
+        padding: 12px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+    }
+}
